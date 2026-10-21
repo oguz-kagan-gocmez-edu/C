@@ -1,0 +1,16 @@
+# Compiled C executables
+*.out
+*.o
+*.a
+*.so
+*.dylib
+
+# Executables without extensions (macOS/Linux)
+main
+a.out
+
+# Debug files
+*.dSYM/
+
+# macOS
+.DS_Store

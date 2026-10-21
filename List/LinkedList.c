@@ -25,7 +25,7 @@ struct LinkedList
 static void insertFirst (struct LinkedList *self, int data) 
 {
     //struct Node *new = (struct Node *)malloc(sizeof(struct Node));
-    // struct Node *new = (struct Node *) calloc (1, sizeof(struct Node));
+    struct Node *new = (struct Node *) calloc (1, sizeof(struct Node));
 
     if (new == NULL) {
         printf("The creation of the node(data:%i) while inserting first is failed!\n", data);
@@ -57,7 +57,7 @@ struct LinkedList new_linkedList ()
 
 int main(int argc, char const *argv[])
 {
-    struct LinkedList my_list;
+    struct LinkedList my_list = new_linkedList();
     // z denotes size_t, u denotes unsigned 10 based.
     printf("%zu\n", my_list.length);
     

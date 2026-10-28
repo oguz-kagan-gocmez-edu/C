@@ -27,7 +27,6 @@ int main(int argc, char const *argv[])
     double dist = calculate_distance(&z, &y);
     printf("The distance: %lf\n", dist);
 
-    
 
     return 0;
 }

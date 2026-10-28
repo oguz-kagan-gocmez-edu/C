@@ -51,8 +51,8 @@ int main(int argc, char const *argv[])
     free(arr);
     arr = NULL;
 
-    arr = (int *) malloc(sizeof(int) * n);
-    if (arr == NULL)
+    arr = (int *) malloc(sizeof(int) * n); // (int *) casting is not needed in C since malloc
+    if (arr == NULL)                       // returns (void *) type that is suitable for any object ptr.
     {
         printf("Memory allocation failed.\n");
         return 1;

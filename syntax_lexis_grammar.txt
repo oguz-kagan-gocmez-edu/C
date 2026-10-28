@@ -1,0 +1,12 @@
+// Lexical: Characters are grouped into tokens.
+int age = 20;
+// Tokens: int, age, =, 20, ;
+
+// Syntax: Rules for arranging tokens.
+int age = 20;  // Valid syntax
+int = age 20;  // Invalid syntax
+
+// Semantics: Meaning and behavior of the code.
+int x = 10;
+int y = 0;
+int z = x / y;  // Undefined behavior: division by zero

@@ -17,7 +17,7 @@ struct DoublyLinkedList {
     void (*print)(struct DoublyLinkedList *self);
 
 };
-// will update previous pointers later on
+
 static void insert_first(struct DoublyLinkedList *self, int data) 
 {
     if (self == NULL) {
@@ -34,6 +34,11 @@ static void insert_first(struct DoublyLinkedList *self, int data)
     
     new->data = data;
     new->next = self->head;
+
+    if (self->head != NULL)
+    {
+        self->head->previous = new;
+    }
     self->head = new;
 
     if (self->tail == NULL)
@@ -43,7 +48,7 @@ static void insert_first(struct DoublyLinkedList *self, int data)
 
     self->length++;
 }
-// will update previous pointer later on
+
 static void insert_last(struct DoublyLinkedList *self, int data) 
 {
     if (self == NULL) {
@@ -64,6 +69,7 @@ static void insert_last(struct DoublyLinkedList *self, int data)
     {
         self->head = new;
     } else {
+        new->previous = self->tail;
         self->tail->next = new;
     }
     self->tail = new;

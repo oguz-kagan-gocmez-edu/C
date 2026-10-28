@@ -17,6 +17,7 @@ int main(int argc, char const *argv[])
     if (argc != 3)
     {
         printf("Usage: ./function_gcd number1 number2\n");
+        return 1;
     }
     
     int x = atoi(argv[1]);
